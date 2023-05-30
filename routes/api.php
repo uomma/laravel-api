@@ -20,5 +20,5 @@ use Illuminate\Support\Facades\Route;
 });
  */
 
- Route::get('test', [ProjectController::class, 'index']);
+ Route::get('posts', [ProjectController::class, 'index']);
 
