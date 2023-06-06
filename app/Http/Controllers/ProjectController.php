@@ -15,4 +15,19 @@ class ProjectController extends Controller
 
         return response()->json(['done' => true, 'check'=> $posts]);
     }
+    
+public function show(string $slug){
+    $posts= Post::where('slug', $slug)->first();
+if($posts){
+    return response()->json(['done' => true, 'check'=> $posts]);
+
+}else{
+    return response()->json(['done' => false, 'check'=> $posts],404);
+
 }
+
+}
+
+}
+
+
